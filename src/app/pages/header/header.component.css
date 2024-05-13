@@ -1,0 +1,15 @@
+.description-space{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    place-content: center;
+    background-color: rgb(24, 41, 50);
+    border-bottom: 1px solid white; /* Added bottom border */
+    h1{
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+
+    }
+}

@@ -1,0 +1,25 @@
+<section>
+    <div class="left-side">
+        <div class="chat-space">
+            <div class="chat-item" *ngFor="let user of userList" (click)="selectUser(user)" [class.selected]="isSelected(user)">
+                <img class="profile-pic" [src]="user.image_url" alt="profile pic">
+                <p class="profile-name">{{ user.nombre }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="right-side">
+        <div class="message-space">
+            <div class="message-box" >
+                <ng-container *ngFor="let message of messages">
+                    <div *ngIf="message.id === currentUser.id" class="message-personal">{{ message.mensaje }}</div>
+                    <div *ngIf="message.id !== currentUser.id" class="message-friend">{{ message.mensaje }}</div>
+                </ng-container>
+            </div>
+            <div class="message-input-space">
+                <input type="text" id="text-message" placeholder="Escriba su mensaje">
+                <button>Enviar</button>
+            </div>
+        </div>
+    </div>
+</section>

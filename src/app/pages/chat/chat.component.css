@@ -1,0 +1,126 @@
+section {
+    display: flex;
+    height: max-content;
+  }
+  
+  .left-side {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .chat-space {
+    overflow-y: auto;
+    height: 100%; /* Adjust height as needed */
+    border-radius: 10px;
+    border: 1px solid black;
+    
+    .chat-item {
+      display: flex;
+      align-items: center;
+      padding: 2px;
+      cursor: pointer;
+      transition:ease-in 0.2s;
+      height: max-content;
+      border: 1px solid rgb(209, 209, 209);
+      
+      .profile-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .profile-name {
+        font-weight: bold;
+        color: black;
+        font-size: 20px;
+      }
+  
+    }
+    .chat-item:hover{
+      background-color: #87c1ff;
+    }
+    
+  }
+  .chat-item.selected {
+    background-color: #4096f8; /* Change to your desired background color */
+    border-left: 3px solid blue; /* Change to your desired border style */
+  }
+  
+  
+  
+  .right-side {
+    flex: 2;
+    padding: 5px;
+    background-color: #fff;
+  
+    .message-space {
+      height: calc(100vh - 140px); /* Adjust height as needed */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-image: url('/src/assets/bg_image.jpg'); /* Adjust the path based on your project structure */
+      background-size: cover;
+      background-position: center;
+  
+      .message-box {
+        display: flex;
+        flex-direction: column;
+  
+        .message-personal {
+          align-self: flex-end;
+          width: max-content;
+          background-color: #e2f3e6;
+          margin-right: 10%;
+          margin-bottom: 10px;
+          padding: 10px;
+          border-radius: 10px;
+        }
+        
+        .message-friend {
+          background-color: #f3f3f3;
+          margin-left: 2%;
+          margin-bottom: 10px;
+          width: max-content;
+          border-radius: 5px;
+          padding: 10px;
+        }
+      }
+      .message-input-space {
+        display: flex;
+        align-items: center;
+        
+        #text-message {
+          flex: 1;
+          padding: 10px;
+          margin-right: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+  
+        button {
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+  
+        button:hover {
+          background-color: #0056b3;
+        }
+      }
+      
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
